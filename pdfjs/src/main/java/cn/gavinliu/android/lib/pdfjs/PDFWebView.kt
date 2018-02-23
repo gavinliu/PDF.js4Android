@@ -12,9 +12,17 @@ class PDFWebView : WebView {
 
     private val PDFJS_ASSETS_PATH = "file:///android_asset/pdfjs-1.9.426-dist/web/viewer.html"
 
-    constructor(context: Context?) : super(context)
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+    constructor(context: Context?) : super(context) {
+        init()
+    }
+
+    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {
+        init()
+    }
+
+    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
+        init()
+    }
 
     @SuppressLint("SetJavaScriptEnabled")
     private fun init() {
